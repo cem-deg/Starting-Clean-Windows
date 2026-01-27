@@ -19,12 +19,19 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link active" aria-current="page" to="/">
+              <NavLink 
+                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} 
+                to="/" 
+                end
+              >
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/fundamentals">
+              <NavLink 
+                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} 
+                to="/fundamentals"
+              >
                 Fundamentals
               </NavLink>
             </li>

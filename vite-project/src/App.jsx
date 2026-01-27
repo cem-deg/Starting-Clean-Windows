@@ -1,19 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router'
 import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Main from './components/Main'
+import Fundamentals from './pages/fundamentals'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <Navbar />
-    <Main />
-    <Footer />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/fundamentals" element={<Fundamentals />} />
+      </Routes>
+      <Footer />
     </>
   )
 }

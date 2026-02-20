@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Main() {
     return (
         <main className="hero-section text-center py-5">
@@ -47,10 +49,10 @@ export default function Main() {
                     <h6><i className="bi bi-speedometer2"></i> These Improvements are for <span>Gaming Performances.</span></h6>
                 </div>
                 
-                <button className="btn btn-outline-danger btn-lg px-5 py-3">
+                <Link to="/fundamentals" className="btn btn-outline-danger btn-lg px-5 py-3">
                     <i className="bi bi-rocket-takeoff me-2"></i>
                     Get Started
-                </button>
+                </Link>
                 
                 <div className="row mt-5">
                     <div className="col-md-4">

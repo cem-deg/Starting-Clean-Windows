@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 200">
+  <g fill="#000">
+    <path d="M20 180V20h60l40 110 40-110h60v160h-45V65l-42 115h-26L65 65v115H20z"/>
+    <path d="M260 180V20h55l65 115V20h45v160h-50l-70-120v120h-45z"/>
+    <path d="M450 180V20h45v160h-45z"/>
+  </g>
+</svg>

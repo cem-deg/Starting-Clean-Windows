@@ -1,6 +1,6 @@
-/* Sayfa kenarlarındaki beyazlığı kaldırmak için */
+/* ===== FUNDAMENTALS PAGE - BLACK, WHITE & YELLOW ===== */
 .fundamentals-wrapper {
-    background-color: #1a1a2e;
+    background-color: #ffffff;
     min-height: calc(100vh - 120px);
     width: 100%;
 }
@@ -10,38 +10,43 @@
     margin: 0 auto;
     padding: 2rem;
     min-height: calc(100vh - 120px);
-    background-color: #1a1a2e;
+    background-color: #ffffff;
 }
 
 .fundamentals-container h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #bbb;
+    color: #111111;
     font-size: 2rem;
+    font-weight: 700;
 }
 
 .fundamentals-container section {
-    background-color: #16213e;
-    border-radius: 8px;
+    background-color: #fafafa;
+    border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 1rem;
-    border-left: 4px solid rgb(145, 3, 240);
+    border: 2px solid #e5e5e5;
+    border-left: 4px solid #fbbf24;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .fundamentals-container section:hover {
-    background-color: #0f1729;
+    background-color: #f5f5f5;
+    border-color: #fbbf24;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .fundamentals-container h3 {
-    color: rgb(145, 3, 240);
+    color: #111111;
     margin-bottom: 0.5rem;
     font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .fundamentals-container p {
-    color: #bbb;
+    color: #333333;
     margin: 0;
     line-height: 1.6;
 }
@@ -49,28 +54,30 @@
 .intro-text {
     text-align: center;
     margin-bottom: 2rem;
-    color: #888;
+    color: #666666;
     font-size: 1rem;
 }
 
 /* Accordion Styles */
 .accordion-item {
-    background-color: #16213e;
-    border-radius: 8px;
+    background-color: #fafafa;
+    border-radius: 12px;
     margin-bottom: 1rem;
-    border-left: 4px solid rgb(145, 3, 240);
+    border: 2px solid #e5e5e5;
+    border-left: 4px solid #fbbf24;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .accordion-item:hover {
-    background-color: #0f1729;
+    background-color: #f5f5f5;
+    border-color: #fbbf24;
 }
 
 .accordion-item.open {
-    border-left-color: rgb(184, 98, 241);
-    box-shadow: 0 4px 15px rgba(184, 98, 241, 0.2);
+    border-color: #fbbf24;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2);
 }
 
 .accordion-header {
@@ -85,13 +92,14 @@
 }
 
 .accordion-header h3 {
-    color: rgb(145, 3, 240);
+    color: #111111;
     margin: 0;
     font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .accordion-icon {
-    color: rgb(145, 3, 240);
+    color: #fbbf24;
     font-size: 1.5rem;
     font-weight: bold;
     transition: transform 0.3s ease;
@@ -103,7 +111,7 @@
 
 .accordion-content {
     padding: 0 1.5rem 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid #e5e5e5;
     animation: slideDown 0.3s ease;
 }
 
@@ -119,21 +127,22 @@
 }
 
 .accordion-content h4 {
-    color: #4dabf7;
+    color: #111111;
     margin: 1rem 0 0.75rem;
     font-size: 1.1rem;
+    font-weight: 600;
 }
 
 .steps-list {
     margin: 0;
     padding-left: 1.5rem;
-    color: #ccc;
+    color: #333333;
 }
 
 .steps-list li {
     padding: 0.5rem 0;
     line-height: 1.6;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .steps-list li:last-child {
@@ -141,10 +150,678 @@
 }
 
 .steps-list li::marker {
-    color: rgb(145, 3, 240);
+    color: #fbbf24;
     font-weight: bold;
 }
 
 .steps-list strong {
-    color: rgb(238, 71, 71);
+    color: #111111;
+    font-weight: 700;
+}
+
+.steps-list a {
+    color: #fbbf24;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.steps-list a:hover {
+    color: #f59e0b;
+}
+
+.steps-list ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.steps-list ul li {
+    border-bottom: none;
+    padding: 0.25rem 0;
+}
+
+/* ===== CPU SELECTION SECTION - MODERN ===== */
+.cpu-selection {
+    text-align: center;
+    padding: 3rem 2rem;
+    animation: fadeIn 0.5s ease;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    max-width: 480px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.cpu-selection .back-btn {
+    margin-bottom: 1.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.selection-title {
+    font-size: 1.25rem;
+    color: #111111;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.cpu-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.cpu-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 20px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    gap: 0.5rem;
+    box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        0 4px 16px rgba(0, 0, 0, 0.04),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.cpu-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 20px;
+}
+
+.cpu-btn i {
+    position: relative;
+    z-index: 1;
+    font-size: 2.75rem;
+    color: #333333;
+    transition: all 0.3s ease;
+}
+
+.cpu-btn .intel-logo {
+    position: relative;
+    z-index: 1;
+    width: 70px;
+    height: auto;
+    transition: all 0.3s ease;
+    filter: brightness(0);
+}
+
+.cpu-btn span {
+    position: relative;
+    z-index: 1;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666666;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.cpu-btn:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 
+        0 8px 24px rgba(251, 191, 36, 0.25),
+        0 16px 48px rgba(251, 191, 36, 0.15);
+}
+
+.cpu-btn:hover::before {
+    opacity: 1;
+}
+
+.cpu-btn:hover i {
+    color: #111111;
+    transform: scale(1.1);
+}
+
+.cpu-btn:hover .intel-logo {
+    filter: brightness(0);
+    transform: scale(1.1);
+}
+
+.cpu-btn:hover span {
+    color: #111111;
+    font-weight: 700;
+}
+
+.cpu-btn:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* ===== STEPS CONTENT SECTION ===== */
+.steps-content {
+    animation: fadeIn 0.5s ease;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1.5rem;
+    background: transparent;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    color: #666666;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    border-color: #fbbf24;
+    color: #111111;
+    background: #fffbeb;
+}
+
+.back-btn i {
+    font-size: 1rem;
+}
+
+/* Back Buttons Container */
+.back-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+/* Selected Badges Container */
+.selected-badges {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.selected-cpu-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #fbbf24;
+    color: #111111;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.selected-cpu-badge i {
+    font-size: 1rem;
+}
+
+.selected-cpu-badge.gpu-badge {
+    background: #111111;
+    color: #fbbf24;
+}
+
+/* NVIDIA Button */
+.nvidia-btn i {
+    color: #111111;
+}
+
+/* ===== CONFIRMATION SCREEN ===== */
+.confirmation-screen {
+    animation: fadeIn 0.5s ease;
+}
+
+.confirmation-card {
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    padding: 2.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.confirmation-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.confirmation-icon i {
+    font-size: 2rem;
+    color: #111111;
+}
+
+.confirmation-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 1.5rem;
+}
+
+.confirmation-selections {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.confirmation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+}
+
+.confirmation-label {
+    font-size: 0.9rem;
+    color: #666666;
+    font-weight: 500;
+}
+
+.confirmation-value {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+.confirmation-value i {
+    font-size: 1.25rem;
+}
+
+.confirmation-intel-logo {
+    height: 1.25rem;
+    width: auto;
+    filter: brightness(0);
+}
+
+.confirmation-info {
+    background: #fffbeb;
+    border: 1px solid #fbbf24;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fbbf24;
+    color: #111111;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.info-badge i {
+    font-size: 1rem;
+}
+
+.info-text {
+    font-size: 0.9rem;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.info-text strong {
+    color: #111111;
+}
+
+.confirmation-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.confirmation-buttons .back-btn {
+    margin-bottom: 0;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.start-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    padding: 0.85rem 1.5rem;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border: none;
+    border-radius: 10px;
+    color: #111111;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+}
+
+.start-btn:active {
+    transform: translateY(0);
+}
+
+.start-btn i {
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.start-btn:hover i {
+    transform: translateX(3px);
+}
+
+/* ===== STEP PAGE ===== */
+.step-page {
+    animation: fadeIn 0.5s ease;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.step-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.step-badge {
+    display: inline-block;
+    background: #fbbf24;
+    color: #111111;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.step-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.step-title i {
+    color: #fbbf24;
+    font-size: 1.5rem;
+}
+
+.step-subtitle {
+    color: #666666;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.step-content-card {
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.step-instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+    transition: all 0.2s ease;
+}
+
+.instruction-item:hover {
+    border-color: #fbbf24;
+    background: #fffbeb;
+}
+
+.instruction-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    background: #111111;
+    color: #fbbf24;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.instruction-item span:last-child {
+    color: #333333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.instruction-item strong {
+    color: #111111;
+}
+
+.step-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+    border-radius: 12px;
+    color: #b91c1c;
+    font-size: 0.9rem;
+}
+
+.step-warning i {
+    font-size: 1.25rem;
+    color: #dc2626;
+    flex-shrink: 0;
+}
+
+.step-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.step-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.step-nav-btn.prev-btn {
+    background: transparent;
+    border: 2px solid #e5e5e5;
+    color: #666666;
+}
+
+.step-nav-btn.prev-btn:hover {
+    border-color: #fbbf24;
+    color: #111111;
+    background: #fffbeb;
+}
+
+.step-nav-btn.next-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    border: none;
+    color: #111111;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.step-nav-btn.next-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+}
+
+.step-nav-btn i {
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.step-nav-btn.prev-btn:hover i {
+    transform: translateX(-3px);
+}
+
+.step-nav-btn.next-btn:hover i {
+    transform: translateX(3px);
+}
+
+/* ===== BRAND SELECTION ===== */
+.instruction-with-brands {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.brand-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    margin-top: 0.5rem;
+    overflow-x: auto; /* Just in case */
+    padding-bottom: 5px; /* For scrollbar if needed */
+}
+
+.brand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Distribute space evenly */
+    height: 40px;
+    padding: 0.4rem;
+    background: #ffffff;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.brand-btn:hover {
+    border-color: #fbbf24;
+    background: #fffbeb;
+}
+
+.brand-btn.active {
+    border-color: #fbbf24;
+    background: #fffbeb;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.3);
+}
+
+.brand-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #666666;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.brand-btn:hover .brand-text,
+.brand-btn.active .brand-text {
+    color: #111111;
+}
+
+.brand-btn img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.brand-btn:hover img,
+.brand-btn.active img {
+    filter: brightness(0);
+    opacity: 1;
+}
+
+.bios-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #111111;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: all 0.2s ease;
+    animation: fadeIn 0.3s ease;
+}
+
+.bios-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+}
+
+.bios-link i {
+    font-size: 0.9rem;
 }

@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 export default function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+        <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
             <div className="container">
         <NavLink className="navbar-brand" to="/">EFFW</NavLink>
         <button

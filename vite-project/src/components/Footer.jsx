@@ -1,13 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="footer text-center text-white border-top border-body">
+    <footer className="footer text-center">
       <div className="container p-4">
         <section className="mb-4">
           <a
             className="btn btn-outline-light btn-floating m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
           >
             <i className="bi bi-facebook"></i>
           </a>
@@ -15,7 +14,6 @@ export default function Footer() {
             className="btn btn-outline-light btn-floating m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
           >
             <i className="bi bi-twitter"></i>
           </a>
@@ -23,7 +21,6 @@ export default function Footer() {
             className="btn btn-outline-light btn-floating m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
           >
             <i className="bi bi-google"></i>
           </a>
@@ -31,16 +28,15 @@ export default function Footer() {
             className="btn btn-outline-light btn-floating m-1"
             href="#!"
             role="button"
-            data-mdb-ripple-color="dark"
           >
             <i className="bi bi-instagram"></i>
           </a>
         </section>
       </div>
 
-      <div className="text-center p-3">
+      <div className="text-center p-3" style={{ borderTop: '1px solid #333' }}>
         © 2026 Copyright - 
-        <a className="text-white" href="#">
+        <a href="#">
           <span> EFFW</span>
         </a>
       </div>

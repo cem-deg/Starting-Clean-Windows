@@ -1,99 +1,144 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import './Fundamentals.css';
 
-function AccordionItem({ title, children }) {
-    const [isOpen, setIsOpen] = useState(false);
-
-    return (
-        <div 
-            className={`accordion-item ${isOpen ? 'open' : ''}`}
-            onClick={() => setIsOpen(!isOpen)}
-        >
-            <div className="accordion-header">
-                <h3>{title}</h3>
-                <span className="accordion-icon">{isOpen ? '−' : '+'}</span>
-            </div>
-            {isOpen && (
-                <div className="accordion-content" onClick={(e) => e.stopPropagation()}>
-                    {children}
-                </div>
-            )}
-        </div>
-    );
-}
-
 export default function Fundamentals() {
+    const navigate = useNavigate();
+    const [selectedCPU, setSelectedCPU] = useState(null);
+    const [selectedGPU, setSelectedGPU] = useState(null);
+
+    const handleSelectCPU = (cpu) => {
+        setSelectedCPU(cpu);
+    };
+
+    const handleSelectGPU = (gpu) => {
+        setSelectedGPU(gpu);
+    };
+
+    const handleConfirm = () => {
+        navigate('/step1', { state: { selectedCPU, selectedGPU } });
+    };
+
+    const handleBackToCPU = () => {
+        setSelectedCPU(null);
+        setSelectedGPU(null);
+    };
+
+    const handleBackToGPU = () => {
+        setSelectedGPU(null);
+    };
+
     return (
         <div className="fundamentals-wrapper">
             <main className="fundamentals-container">
                 <h2>Fundamentals of Fresh Windows for Good Performance</h2>
                 
-                <AccordionItem title="1. BIOS Update">
-                    <ol className="steps-list">
-                        <li>Search your motherboard on Web Browser. </li>
-                        <li>Make sure the Website you go to is <strong>Official Website</strong> of the brand you have.</li>
-                        <li>Go to the Support or Downloads section of the website.</li>
-                        <li>Look for the BIOS section.</li>
-                        <li>Download the latest BIOS version available for your motherboard.</li>
-                    </ol>
-                </AccordionItem>
-                <AccordionItem title="2. Chipset Drivers">
-                    <ol className="steps-list">
-                        <li>Search your motherboard on Web Browser. </li>
-                        <li>Visit the official website of your motherboard manufacturer.</li>
-                        <li>Go to the Support or Downloads section of the website.</li>
-                        <li>You should download everything on that page. It will make your motherboard work properly.</li>
-                        <li>Setup the downloaded drivers one by one.</li>
-                    </ol>
-                </AccordionItem>
-                <AccordionItem title="3. GPU Drivers">
-                    <ol className="steps-list">
-                        <li>Identify your GPU model (NVIDIA, AMD, or Intel).</li>
-                        <li>Visit the official website of your GPU manufacturer:
-                            <ul>
-                                <li>NVIDIA: <a href="https://www.nvidia.com/Download/index.aspx" target="_blank" rel="noopener noreferrer"><i class="bi bi-nvidia"></i></a></li>
-                                <li>AMD: <a href="https://www.amd.com/en/support" target="_blank" rel="noopener noreferrer"><i class="bi bi-amd"></i></a></li>
-                                <li>Intel: <a href="https://downloadcenter.intel.com/product/80939/Graphics" target="_blank" rel="noopener noreferrer">Intel Driver Download</a></li>
-                            </ul>
-                        </li>
-                        <li>Use the search tool on the website to find the latest drivers for your specific GPU model.</li>
-                        <li>Download and install the drivers by following the on-screen instructions.</li>
-                    </ol>
-                </AccordionItem>
+                {!selectedCPU ? (
+                    <div className="cpu-selection">
+                        <h3 className="selection-title">Select Your Processor (CPU)</h3>
+                        
+                        <div className="cpu-buttons">
+                            <button 
+                                className="cpu-btn intel-btn"
+                                onClick={() => handleSelectCPU('intel')}
+                            >
+                                <img 
+                                    src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" 
+                                    alt="Intel" 
+                                    className="intel-logo"
+                                />
+                                <span>Intel</span>
+                            </button>
+                            
+                            <button 
+                                className="cpu-btn amd-btn"
+                                onClick={() => handleSelectCPU('amd')}
+                            >
+                                <i className="bi bi-amd"></i>
+                                <span>AMD</span>
+                            </button>
+                        </div>
+                    </div>
+                ) : !selectedGPU ? (
+                    <div className="cpu-selection">
+                        <button className="back-btn" onClick={handleBackToCPU}>
+                            <i className="bi bi-arrow-left"></i> Change Processor
+                        </button>
+                        
+                        <h3 className="selection-title">Select Your Graphics Card (GPU)</h3>
+                        
+                        <div className="cpu-buttons">
+                            <button 
+                                className="cpu-btn nvidia-btn"
+                                onClick={() => handleSelectGPU('nvidia')}
+                            >
+                                <i className="bi bi-nvidia"></i>
+                                <span>NVIDIA</span>
+                            </button>
+                            
+                            <button 
+                                className="cpu-btn amd-btn"
+                                onClick={() => handleSelectGPU('amd')}
+                            >
+                                <i className="bi bi-amd"></i>
+                                <span>AMD</span>
+                            </button>
+                        </div>
+                    </div>
+                ) : (
+                    <div className="confirmation-screen">
+                        <div className="confirmation-card">
+                            <div className="confirmation-icon">
+                                <i className="bi bi-check-circle"></i>
+                            </div>
+                            <h3 className="confirmation-title">Your Selection</h3>
+                            
+                            <div className="confirmation-selections">
+                                <div className="confirmation-item">
+                                    <span className="confirmation-label">Processor</span>
+                                    <span className="confirmation-value">
+                                        {selectedCPU === 'intel' ? (
+                                            <img 
+                                                src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" 
+                                                alt="Intel" 
+                                                className="confirmation-intel-logo"
+                                            />
+                                        ) : (
+                                            <><i className="bi bi-amd"></i> AMD</>
+                                        )}
+                                    </span>
+                                </div>
+                                <div className="confirmation-item">
+                                    <span className="confirmation-label">Graphics Card</span>
+                                    <span className="confirmation-value">
+                                        <i className={selectedGPU === 'nvidia' ? 'bi bi-nvidia' : 'bi bi-amd'}></i>
+                                        {selectedGPU === 'nvidia' ? 'NVIDIA' : 'AMD'}
+                                    </span>
+                                </div>
+                            </div>
 
-                <AccordionItem title="4. Windows Update">
-                    <ol className="steps-list">
-                        <li>Click  <i class="bi bi-windows"></i>  icon and go to Settings.</li>
-                        <li>Go to Update & Security.</li>
-                        <li>Click on Windows Update in the left sidebar.</li>
-                        <li>Click the "Check for updates" button.</li>
-                        <li>If updates are available, click "Download and install" to begin the update process.</li>
-                        <li>Restart your computer if prompted to complete the installation of updates.</li>
-                    </ol>
-                </AccordionItem>
+                            <div className="confirmation-info">
+                                <div className="info-badge">
+                                    <i className="bi bi-list-ol"></i>
+                                    <span>8 Steps</span>
+                                </div>
+                                <p className="info-text">
+                                    We'll guide you through <strong>8 optimization steps</strong> to get your Windows running at peak performance. Follow each step carefully for best results.
+                                </p>
+                            </div>
 
-                <AccordionItem title="5. Disable Startup Programs">
-                    <ol className="steps-list">
-                        <li>Right click on the taskbar and select Task Manager.</li>
-                        <li>Go to the Startup tab.</li>
-                        <li>Disable unnecessary programs that start with Windows.</li>
-                    </ol>
-                </AccordionItem>
-
-                <AccordionItem title="6. Power Plan Settings">
-                    <ol className="steps-list">
-                        <li>Click  <i class="bi bi-search"></i>  and type "Select Power Plan".</li>
-                        <li>Under "Power mode," select "Best performance" from the dropdown menu.</li>
-                    </ol>
-                </AccordionItem>
-
-                <AccordionItem title="7. SSD Optimization">
-                    <p>Buraya adımları yazabilirsin...</p>
-                </AccordionItem>
-
-                <AccordionItem title="8. Visual Effects">
-                    <p>Buraya adımları yazabilirsin...</p>
-                </AccordionItem>
+                            <div className="confirmation-buttons">
+                                <button className="back-btn" onClick={handleBackToGPU}>
+                                    <i className="bi bi-arrow-left"></i> Change Selection
+                                </button>
+                                <button className="start-btn" onClick={handleConfirm}>
+                                    Start Optimization
+                                    <i className="bi bi-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </main>
         </div>
     );

@@ -228,10 +228,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border: none;
-    border-radius: 20px;
+    border-radius: 16px;
     background: #ffffff;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -259,7 +259,7 @@
 .cpu-btn i {
     position: relative;
     z-index: 1;
-    font-size: 2.75rem;
+    font-size: 2rem;
     color: #333333;
     transition: all 0.3s ease;
 }
@@ -267,7 +267,7 @@
 .cpu-btn .intel-logo {
     position: relative;
     z-index: 1;
-    width: 70px;
+    width: 50px;
     height: auto;
     transition: all 0.3s ease;
     filter: brightness(0);
@@ -618,14 +618,16 @@
 }
 
 .instruction-item {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center; /* Center items vertically */
     gap: 1rem;
     padding: 1rem;
     background: #ffffff;
     border-radius: 12px;
     border: 1px solid #e5e5e5;
     transition: all 0.2s ease;
+    text-align: left; /* Ensure text starts from left */
 }
 
 .instruction-item:hover {
@@ -651,6 +653,10 @@
     color: #333333;
     font-size: 0.95rem;
     line-height: 1.5;
+    align-self: center; /* Center text vertically relative to the container */
+    padding-top: 0; /* Removing the manual padding */
+    text-align: left;
+    width: 100%;
 }
 
 .instruction-item strong {
@@ -824,4 +830,176 @@
 
 .bios-link i {
     font-size: 0.9rem;
+}
+/* Combined Selection Screen styles */
+.selection-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.selection-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .selection-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.cpu-selection-section, .gpu-selection-section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.cpu-selection-section:hover, .gpu-selection-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.selection-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+}
+
+/* Enhancing existing cpu-btn styles for selection state */
+.cpu-btn {
+    width: 100%;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cpu-btn.selected {
+    border-color: #fbbf24;
+    background-color: #fffbeb;
+    color: #111;
+    box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.3);
+}
+
+.check-icon {
+    position: absolute;
+    right: 1rem;
+    color: #d97706; /* Darker yellow/orange */
+    font-size: 1.2rem;
+    animation: scaleIn 0.2s ease;
+}
+
+.selection-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+
+.proceed-btn {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #111;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+}
+
+.proceed-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
+    filter: brightness(1.05);
+}
+
+.proceed-btn:disabled {
+    background: #e5e5e5;
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Removing forced vertical layout to restore original button look */
+.selection-row .cpu-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem; /* Ensure gap is sufficient */
+    flex-wrap: nowrap;
+}
+
+/* Explicitly override any lingering width: 100% on buttons in this context */
+.selection-row .cpu-btn {
+    width: 120px;
+    height: 120px;
+    flex-direction: column; /* Icon on top */
+    min-height: 0; /* Remove min-height from previous list view */
+    padding: 0; /* Reset padding */
+    justify-content: center;
+}
+
+.selection-row .cpu-btn i,
+.selection-row .cpu-btn .intel-logo {
+    margin-right: 0; /* Removing side margin from list view */
+    width: 50px; /* Reset logo width */
+    font-size: 2rem; /* Reset icon size */
+}
+
+.selection-row .cpu-btn span {
+    margin-top: 0.5rem; /* Add margin top for text */
+    font-size: 0.9rem; /* Reset font size */
+}
+
+/* Override existing hover effects that might look weird on wide buttons */
+.selection-row .cpu-btn:hover {
+     /* Styles reset to default */
+}
+
+/* Section separators for Step 5 */
+.section-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 1rem 0; /* Removed top margin */
+    padding-left: 0.5rem;
+}
+
+.section-subtitle:first-child {
+    margin-top: 0;
+}
+
+.section-subtitle i {
+    color: #f59e0b;
+    font-size: 1.25rem;
+}
+
+.section-divider {
+    height: 1px;
+    background: #e5e5e5;
+    margin: 1.5rem 0; /* Equal top and bottom margin */
+    width: 100%;
 }

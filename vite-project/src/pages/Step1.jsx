@@ -13,7 +13,11 @@ export default function Step1() {
     };
 
     const handleNext = () => {
-        navigate('/step2', { state: { selectedCPU, selectedGPU } });
+        if (selectedCPU === 'amd') {
+            navigate('/step2-amd', { state: { selectedCPU, selectedGPU } });
+        } else {
+            navigate('/step2-intel', { state: { selectedCPU, selectedGPU } });
+        }
     };
 
     return (

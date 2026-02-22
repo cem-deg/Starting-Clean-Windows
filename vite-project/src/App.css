@@ -101,7 +101,49 @@
   font-weight: 600;
 }
 
-/* ===== FOOTER - Black & Yellow ===== */
+/* ===== NAVBAR LINKS - Vivid & Animated ===== */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #cccccc !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover Animation - Yellow Shine on Text */
+.navbar-nav .nav-link:hover {
+  /* Create the gradient: Base Yellow -> Bright Shine -> Base Yellow */
+  background: linear-gradient(120deg, var(--primary-dark) 0%, #fff 50%, var(--primary-dark) 100%);
+  background-size: 200% auto;
+  
+  /* Clip background to text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Make text transparent so background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  
+  /* Animate the details */
+  animation: shine 1s linear infinite;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.3); /* Subtle yellow glow */
+}
+
+/* Active State - Solid Vibrant Yellow */
+.navbar-nav .nav-link.active {
+  color: var(--primary) !important;
+  -webkit-text-fill-color: var(--primary) !important;
+  background: none !important;
+  font-weight: 700;
+  text-shadow: 0 0 15px rgba(251, 191, 36, 0.8);
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
 .footer {
   background-color: var(--bg-dark) !important;
   border-top: none !important;

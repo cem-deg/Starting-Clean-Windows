@@ -1,10 +1,14 @@
 import { Link } from "react-router";
+import Logo from "./Logo";
 
 export default function Main() {
     return (
         <main className="hero-section text-center py-5">
             <div className="container">
-                <h1 className="display-4 fw-bold mb-3">Everything for Fresh Windows</h1>
+                <div className="d-flex align-items-center justify-content-center gap-3 mb-3">
+                    <Logo style={{ width: '80px', height: '80px', filter: 'drop-shadow(0 0 12px rgba(251, 191, 36, 0.6))' }} />
+                    <h1 className="display-4 fw-bold mb-0">Everything for Fresh Windows</h1>
+                </div>
                 <p className="lead text-secondary mb-4">Your guide to optimizing Windows for peak performance</p>
                 
                 <p className="mb-4" style={{ maxWidth: '600px', margin: '0 auto' }}>
@@ -62,7 +66,7 @@ export default function Main() {
                         <div className="info-card p-4">
                             <p className="h5"><span className="safe-text"><i className="bi bi-shield-check me-2"></i>Is it safe?</span></p>
                             <p className="text-secondary">
-                                Yes, our optimization tips are safe beacuse you won't download anything from our site. We only guide you to what you need to do!
+                                Yes, our optimization tips are safe because you won't download anything from our site. We only guide you to what you need to do!
                             </p>
                         </div>
                     </div>

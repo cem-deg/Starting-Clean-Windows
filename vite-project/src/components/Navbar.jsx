@@ -46,7 +46,7 @@ export default function Navbar() {
                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} 
                 to="/shortcut-boot"
               >
-                CPU Boot
+                CPU Core
               </NavLink>
             </li>
             <li className="nav-item d-flex align-items-center">

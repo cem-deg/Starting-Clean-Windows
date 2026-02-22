@@ -22,13 +22,6 @@ export default function Footer() {
             href="#!"
             role="button"
           >
-            <i className="bi bi-google"></i>
-          </a>
-          <a
-            className="btn btn-outline-light btn-floating m-1"
-            href="#!"
-            role="button"
-          >
             <i className="bi bi-instagram"></i>
           </a>
         </section>

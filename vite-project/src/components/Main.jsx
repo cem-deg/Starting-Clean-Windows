@@ -12,30 +12,33 @@ export default function Main() {
                 </p>
                 <div className="logo-slider my-5">
                     <div className="slider-track">
-                        <div className="slide"><i className="bi bi-windows fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-nvidia fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-cpu fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-gpu-card fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-hdd fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-motherboard fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-windows fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-nvidia fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-cpu fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-gpu-card fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-hdd fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-motherboard fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-windows fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-nvidia fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-cpu fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-gpu-card fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-hdd fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-motherboard fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-windows fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-nvidia fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-cpu fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-gpu-card fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-hdd fs-1"></i></div>
-                        <div className="slide"><i className="bi bi-motherboard fs-1"></i></div>
+                        {/* Define common style for consistency */}
+                        {/* First Set */}
+                        <div className="slide"><i className="bi bi-windows" style={{ fontSize: '1.8rem', color: '#000000' }}></i></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/nvidia/000000" alt="Nvidia" style={{ height: '30px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/intel/000000" alt="Intel" style={{ height: '35px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/amd/000000" alt="AMD" style={{ height: '65px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Micro-Star_International_logo2020.svg" alt="MSI" style={{ height: '17px', width: 'auto', filter: 'brightness(0)' }} /></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/asus/000000" alt="ASUS" style={{ height: '60px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Gigabyte_Technology_logo_20080107.svg" alt="Gigabyte" style={{ height: '16px', width: 'auto', filter: 'brightness(0)' }} /></div>
+                        
+                        {/* Duplicate for seamless loop */}
+                        <div className="slide"><i className="bi bi-windows" style={{ fontSize: '1.8rem', color: '#000000' }}></i></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/nvidia/000000" alt="Nvidia" style={{ height: '30px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/intel/000000" alt="Intel" style={{ height: '35px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/amd/000000" alt="AMD" style={{ height: '65px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Micro-Star_International_logo2020.svg" alt="MSI" style={{ height: '17px', width: 'auto', filter: 'brightness(0)' }} /></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/asus/000000" alt="ASUS" style={{ height: '60px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Gigabyte_Technology_logo_20080107.svg" alt="Gigabyte" style={{ height: '16px', width: 'auto', filter: 'brightness(0)' }} /></div>
+
+                        {/* Third Set */}
+                        <div className="slide"><i className="bi bi-windows" style={{ fontSize: '1.8rem', color: '#000000' }}></i></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/nvidia/000000" alt="Nvidia" style={{ height: '30px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/intel/000000" alt="Intel" style={{ height: '35px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/amd/000000" alt="AMD" style={{ height: '65px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Micro-Star_International_logo2020.svg" alt="MSI" style={{ height: '17px', width: 'auto', filter: 'brightness(0)' }} /></div>
+                        <div className="slide"><img src="https://cdn.simpleicons.org/asus/000000" alt="ASUS" style={{ height: '60px', width: 'auto' }} /></div>
+                        <div className="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Gigabyte_Technology_logo_20080107.svg" alt="Gigabyte" style={{ height: '16px', width: 'auto', filter: 'brightness(0)' }} /></div>
                     </div>
                 </div>
 

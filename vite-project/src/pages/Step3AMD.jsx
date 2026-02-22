@@ -27,7 +27,7 @@ export default function Step3AMD() {
                 <div className="step-page">
                     <div className="step-header">
                         <div className="step-badge">Step 3 of 8</div>
-                        <h3 className="step-title">
+                            <h3 className="step-title">
                             <i className="bi bi-amd"></i>
                             AMD Graphics Drivers
                         </h3>
@@ -75,8 +75,8 @@ export default function Step3AMD() {
                         </div>
 
                         <div className="step-warning">
-                            <i className="bi bi-exclamation-triangle"></i>
-                            <span>During installation, your screen will flicker on and off. This is normal.</span>
+                            <i className="bi bi-info-circle"></i>
+                            <span>During GPU Driver installation, your screen will flicker on and off. This is normal.</span>
                         </div>
 
                         <div className="step-navigation" style={{ marginTop: '2rem' }}>

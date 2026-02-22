@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect x="32" y="32" width="448" height="448" rx="64" fill="#333" stroke="#888" stroke-width="16"/>
+  <rect x="64" y="64" width="384" height="384" rx="32" fill="#5C4DA6"/>
+  
+  <!-- Pins -->
+  <path d="M32 128H0v32h32v32H0v32h32v32H0v32h32v32H0v32h32v32H0v32h32" stroke="#dda" stroke-width="8" />
+  <path d="M480 128h32v32h-32v32h32v32h-32v32h32v32h-32v32h32v32h-32" stroke="#dda" stroke-width="8" />
+  <path d="M128 32V0h32v32h32V0h32v32h32V0h32v32h32V0h32v32h32V0h32" stroke="#dda" stroke-width="8" />
+  <path d="M128 480v32h32v-32h32v32h32v-32h32v32h32v-32h32v32h32v-32h32" stroke="#dda" stroke-width="8" />
+
+  <!-- Text -->
+  <text x="50%" y="50%" text-anchor="middle" dy=".3em" font-family="Arial, sans-serif" font-weight="bold" font-size="140" fill="white">CPU-Z</text>
+</svg>

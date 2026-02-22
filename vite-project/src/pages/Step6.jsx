@@ -50,9 +50,9 @@ export default function Step6() {
                                 <span><strong>Do not disable</strong> drivers or antivirus software (e.g., Realtek Audio, Windows Security).</span>
                             </div>
 
-                            <div className="step-warning" style={{ marginTop: '1rem', marginBottom: '0' }}>
-                                <i className="bi bi-exclamation-triangle"></i>
-                                <span>Don't forget to repeat this step after installing all your applications.</span>
+                            <div className="step-warning repeat-warning" style={{ marginTop: '1rem', marginBottom: '0' }}>
+                                <i className="bi bi-arrow-repeat"></i>
+                                <span>Don't forget to repeat this step after finishing all the steps.</span>
                             </div>
 
                             <div className="section-divider"></div>

@@ -1,31 +1,16 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router';
-import './Fundamentals.css'; // Reusing the same CSS
+import { NavLink } from "react-router";
+import '../Fundamentals.css';
 
-export default function Step1() {
-    const navigate = useNavigate();
-    const location = useLocation();
-    const { selectedCPU, selectedGPU } = location.state || {}; // Retrieve state passed from previous page
+export default function ShortcutBios() {
     const [selectedBrand, setSelectedBrand] = useState(null);
-
-    const handleBack = () => {
-        navigate('/fundamentals');
-    };
-
-    const handleNext = () => {
-        if (selectedCPU === 'amd') {
-            navigate('/step2-amd', { state: { selectedCPU, selectedGPU } });
-        } else {
-            navigate('/step2-intel', { state: { selectedCPU, selectedGPU } });
-        }
-    };
 
     return (
         <div className="fundamentals-wrapper">
             <main className="fundamentals-container">
                 <div className="step-page">
                     <div className="step-header">
-                        <div className="step-badge">Step 1 of 8</div>
+                        <div className="step-badge">Quick Access</div>
                         <h3 className="step-title">
                             <i className="bi bi-motherboard"></i>
                             BIOS Update
@@ -140,18 +125,6 @@ export default function Step1() {
                         <div className="step-warning critical">
                             <i className="bi bi-exclamation-triangle"></i>
                             <span>Don't turn off your PC during BIOS update. This can brick your motherboard.</span>
-                        </div>
-                        
-
-                        <div className="step-navigation" style={{ marginTop: '2rem' }}>
-                            <button className="step-nav-btn prev-btn" onClick={handleBack}>
-                                <i className="bi bi-arrow-left"></i>
-                                Back
-                            </button>
-                            <button className="step-nav-btn next-btn" onClick={handleNext}>
-                                Next Step
-                                <i className="bi bi-arrow-right"></i>
-                            </button>
                         </div>
                     </div>
                 </div>

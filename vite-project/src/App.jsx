@@ -15,6 +15,10 @@ import Step5 from './pages/Step5'
 import Step6 from './pages/Step6'
 import Step7 from './pages/Step7'
 import Step8 from './pages/Step8'
+import Completion from './pages/Completion'
+import AppCenter from './pages/AppCenter'
+import ShortcutBios from './pages/shortcuts/ShortcutBios'
+import ShortcutBoot from './pages/shortcuts/ShortcutBoot'
 
 function App() {
   const location = useLocation()
@@ -26,6 +30,8 @@ function App() {
         <Routes location={location}>
           <Route path="/" element={<Main />} />
           <Route path="/fundamentals" element={<Fundamentals />} />
+          <Route path="/shortcut-bios" element={<ShortcutBios />} />
+          <Route path="/shortcut-boot" element={<ShortcutBoot />} />
           <Route path="/step1" element={<Step1 />} />
           <Route path="/step2-intel" element={<Step2Intel />} />
           <Route path="/step2-amd" element={<Step2AMD />} />
@@ -36,6 +42,8 @@ function App() {
           <Route path="/step6" element={<Step6 />} />
           <Route path="/step7" element={<Step7 />} />
           <Route path="/step8" element={<Step8 />} />
+          <Route path="/completion" element={<Completion />} />
+          <Route path="/app-center" element={<AppCenter />} />
         </Routes>
       </div>
       <Footer />

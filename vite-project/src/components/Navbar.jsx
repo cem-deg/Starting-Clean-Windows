@@ -17,7 +17,7 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav me-auto">
             <li className="nav-item">
               <NavLink 
                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} 
@@ -27,12 +27,32 @@ export default function Navbar() {
                 Home
               </NavLink>
             </li>
+          </ul>
+          <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <NavLink 
                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} 
-                to="/fundamentals"
+                to="/shortcut-bios"
               >
-                Fundamentals
+                BIOS Update
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink 
+                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} 
+                to="/shortcut-boot"
+              >
+                CPU Boot
+              </NavLink>
+            </li>
+            <li className="nav-item d-flex align-items-center">
+              <NavLink 
+                className="btn btn-outline-danger ms-2 px-3 py-1 d-flex align-items-center gap-1"
+                to="/app-center"
+                style={{ fontSize: '0.9rem' }}
+              >
+                <i className="bi bi-grid-fill"></i>
+                Apps
               </NavLink>
             </li>
           </ul>

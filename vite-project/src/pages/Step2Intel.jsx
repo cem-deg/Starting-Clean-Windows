@@ -26,8 +26,12 @@ export default function Step2Intel() {
                     <div className="step-header">
                         <div className="step-badge">Step 2 of 8</div>
                         <h3 className="step-title">
-                            <i className="bi bi-cpu"></i>
-                            Intel Chipset Drivers
+                            <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Intel_logo_%282006-2020%29.svg" 
+                                alt="Intel" 
+                                style={{ height: '32px', width: 'auto', filter: 'brightness(0)' }} 
+                            />
+                            Chipset Drivers
                         </h3>
                         <p className="step-subtitle">Install the latest chipset drivers for optimal communication between your CPU and motherboard.</p>
                     </div>

@@ -1,10 +1,14 @@
 import { NavLink } from "react-router";
+import Logo from "./Logo";
 
 export default function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg" data-bs-theme="dark">
             <div className="container">
-        <NavLink className="navbar-brand" to="/">EFFW</NavLink>
+        <NavLink className="navbar-brand d-flex align-items-center gap-2" to="/">
+            <Logo style={{ width: '32px', height: '32px', filter: 'drop-shadow(0 0 8px rgba(251, 191, 36, 0.5))' }} />
+            <span>EFFW</span>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"

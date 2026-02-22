@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Logo icon">
+  <!-- Outer teardrop -->
+  <path fill="#111" d="M64 14c18.8 0 34 15.2 34 34 0 21.7-19.6 43.2-30 55.3-2.1 2.5-5.9 2.5-8 0C49.6 91.2 30 69.7 30 48c0-18.8 15.2-34 34-34z"/>
+  <!-- Inner hole -->
+  <path fill="#fff" d="M64 30c9.9 0 18 8.1 18 18s-8.1 18-18 18-18-8.1-18-18 8.1-18 18-18z"/>
+  <!-- Accent dot -->
+  <circle cx="78" cy="44" r="5" fill="#FFC400"/>
+</svg>

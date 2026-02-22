@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Logo icon">
+  <rect x="22" y="22" width="84" height="84" rx="18" fill="#111"/>
+  <!-- subtle inner cut to create identity -->
+  <path fill="#fff" d="M44 44h40c2.2 0 4 1.8 4 4v32c0 2.2-1.8 4-4 4H60c-8.8 0-16-7.2-16-16V48c0-2.2 1.8-4 4-4z"/>
+  <!-- accent "seal" -->
+  <circle cx="84" cy="44" r="6" fill="#FFC400"/>
+</svg>

@@ -1,0 +1,24 @@
+export default function Logo({ className, style }) {
+  return (
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      viewBox="0 0 128 128" 
+      role="img" 
+      aria-label="Logo icon"
+      className={className}
+      style={style}
+    >
+      {/* Base */}
+      <rect x="18" y="18" width="92" height="92" rx="24" fill="#0B0B0B"/>
+
+      {/* Corner tab (smaller, clean) */}
+      <rect x="84" y="18" width="26" height="26" rx="11" fill="#fbbf24"/>
+      {/* Subtle highlight (no overflow, premium) */}
+      <circle cx="103" cy="25" r="4" fill="#f59e0b" opacity="0.95"/>
+
+      {/* Split mark (balanced + less "face-like") */}
+      <rect x="40" y="50" width="20" height="30" rx="11" fill="#F6F6F6"/>
+      <rect x="66" y="46" width="22" height="38" rx="12" fill="#F6F6F6"/>
+    </svg>
+  );
+}
